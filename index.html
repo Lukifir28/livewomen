@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meet Beautiful Women Online</title>
+    
+    <!-- Meta untuk sharing -->
+    <meta property="og:title" content="Meet Beautiful Women Online">
+    <meta property="og:description" content="Connect with gorgeous women worldwide. Live chat & video calls available!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-link.com">
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -17,6 +24,7 @@
             color: #fff;
             line-height: 1.4;
             overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
         }
         
         .hero {
@@ -46,24 +54,29 @@
             animation: slideInUp 1s ease-out 0.3s both;
         }
         
-        /* Tombol dengan efek getar dan gerakan */
+        /* Tombol super responsif */
         .cta-button {
             background: #fff;
             color: #c44569;
             border: none;
-            padding: 15px 35px;
-            font-size: 1.2rem;
+            padding: 18px 40px;
+            font-size: 1.3rem;
             font-weight: bold;
             border-radius: 50px;
             cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 1px;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             text-decoration: none;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            min-height: 50px;
+            min-width: 200px;
             animation: pulse 2s infinite, slideInUp 1s ease-out 0.6s both;
+            z-index: 100;
         }
         
         .cta-button::before {
@@ -90,45 +103,28 @@
             animation: shake 0.5s ease-in-out;
         }
         
-        /* Efek getar saat diklik */
         @keyframes shake {
             0%, 100% { transform: translateX(0); }
             10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
             20%, 40%, 60%, 80% { transform: translateX(5px); }
         }
         
-        /* Efek pulse berkedip */
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
             70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
             100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
         }
         
-        /* Efek slide in dari atas */
         @keyframes slideInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
-        /* Efek slide in dari bawah */
         @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
-        /* Efek floating untuk tombol */
         .cta-button.floating {
             animation: float 3s ease-in-out infinite;
         }
@@ -164,10 +160,9 @@
             margin: 0 auto;
         }
         
-        /* Ubah dari card menjadi button */
         .feature-button {
             background: #2a2a2a;
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
             text-align: center;
             transition: all 0.3s ease;
@@ -177,6 +172,12 @@
             cursor: pointer;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+            z-index: 100;
         }
         
         .feature-button:hover {
@@ -207,7 +208,6 @@
         .feature-icon {
             font-size: 2.5rem;
             margin-bottom: 10px;
-            display: inline-block;
             animation: bounce 2s infinite;
         }
         
@@ -270,19 +270,24 @@
             background: #fff;
             color: #c44569;
             border: none;
-            padding: 15px 35px;
-            font-size: 1.2rem;
+            padding: 18px 40px;
+            font-size: 1.3rem;
             font-weight: bold;
             border-radius: 50px;
             cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 1px;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             text-decoration: none;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
             animation: pulse 2s infinite, slideInUp 1s ease-out 0.8s both;
+            min-height: 50px;
+            min-width: 200px;
+            z-index: 100;
         }
         
         .final-cta-button::before {
@@ -323,7 +328,7 @@
             right: 20px;
             background: #333;
             color: white;
-            padding: 12px;
+            padding: 15px;
             border-radius: 8px;
             max-width: 80%;
             z-index: 1000;
@@ -332,17 +337,10 @@
         }
         
         @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(100px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(100px); }
+            to { opacity: 1; transform: translateX(0); }
         }
         
-        /* Scroll indicator */
         .scroll-indicator {
             position: absolute;
             bottom: 30px;
@@ -351,23 +349,30 @@
             animation: bounce 2s infinite;
             cursor: pointer;
             z-index: 10;
+            padding: 10px;
         }
         
         .scroll-indicator::before {
-            content: '⌄';
-            font-size: 2rem;
-            color: rgba(255, 255, 255, 0.7);
+            content: '⌄ SCROLL DOWN ⌄';
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: bold;
         }
         
         .scroll-indicator:hover::before {
-            color: rgba(255, 255, 255, 1);
+            color: #fff;
         }
         
         @media (max-width: 600px) {
             .hero-title { font-size: 1.8rem; }
             .hero-subtitle { font-size: 1rem; }
-            .cta-button { padding: 12px 25px; font-size: 1rem; }
+            .cta-button, .final-cta-button { 
+                padding: 15px 30px; 
+                font-size: 1.1rem;
+                min-width: 180px;
+            }
             .features-grid { grid-template-columns: 1fr; }
+            .feature-button { min-height: 160px; }
         }
     </style>
 </head>
@@ -382,7 +387,7 @@
         <div class="scroll-indicator" id="scrollIndicator"></div>
     </section>
 
-    <!-- Features Section - Sekarang menjadi tombol -->
+    <!-- Features Section -->
     <section class="features" id="features">
         <h2 class="section-title">Why Choose Us?</h2>
         <div class="features-grid">
@@ -432,95 +437,95 @@
         🔥 New women online now!
     </div>
 
-    <!-- Social Bar (dimuat terakhir) -->
+    <!-- Social Bar -->
     <script type='text/javascript' src='//pl27510798.revenuecpmgate.com/04/e0/7e/04e07e6c23fe7482d37425b22a50126b.js'></script>
 
     <script>
-        // Fungsi redirect langsung ke link asli
+        // Fungsi redirect dengan debugging
         function redirect(button, link) {
-            // Efek getar saat diklik
-            button.style.animation = 'shake 0.5s ease-in-out';
+            console.log('Button clicked:', button.id);
+            console.log('Redirecting to:', link);
             
-            // Reset animation
+            // Efek getar
+            button.style.animation = 'shake 0.5s ease-in-out';
             setTimeout(() => {
                 button.style.animation = '';
             }, 500);
             
-            // Langsung ke link tujuan
+            // Redirect langsung
             window.location.href = link;
         }
         
-        // Event listeners untuk tombol utama
-        document.getElementById('mainCta').addEventListener('click', (e) => {
-            e.preventDefault();
-            redirect(e.target, 'https://footballtarkam.blogspot.com/?m=0');
-        });
+        // Event listeners dengan error handling
+        function addClickListener(id, link) {
+            const button = document.getElementById(id);
+            if (button) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    redirect(this, link);
+                });
+                
+                // Touch events untuk mobile
+                button.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.95)';
+                });
+                
+                button.addEventListener('touchend', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            } else {
+                console.error('Button not found:', id);
+            }
+        }
         
-        document.getElementById('finalCtaBtn').addEventListener('click', (e) => {
-            e.preventDefault();
-            redirect(e.target, 'https://footballtarkam.blogspot.com/?m=0');
-        });
+        // Setup semua tombol
+        addClickListener('mainCta', 'https://footballtarkam.blogspot.com/?m=0');
+        addClickListener('finalCtaBtn', 'https://footballtarkam.blogspot.com/?m=0');
+        addClickListener('realWomenBtn', 'https://bit.ly/real-women');
+        addClickListener('liveChatBtn', 'https://bit.ly/live-chat');
+        addClickListener('videoCallsBtn', 'https://bit.ly/video-calls');
         
-        // Event listeners untuk tombol fitur
-        document.getElementById('realWomenBtn').addEventListener('click', (e) => {
-            // Ganti dengan link yang Anda inginkan untuk tombol "Real Women"
-            const realWomenLink = "https://www.revenuecpmgate.com/mt3x9wxj?key=b71ba79424a0121ff6e712aea5e64005";
-            redirect(e.target, realWomenLink);
-        });
-        
-        document.getElementById('liveChatBtn').addEventListener('click', (e) => {
-            // Ganti dengan link yang Anda inginkan untuk tombol "Live Chat"
-            const liveChatLink = "https://www.revenuecpmgate.com/mt3x9wxj?key=b71ba79424a0121ff6e712aea5e64005";
-            redirect(e.target, liveChatLink);
-        });
-        
-        document.getElementById('videoCallsBtn').addEventListener('click', (e) => {
-            // Ganti dengan link yang Anda inginkan untuk tombol "Video Calls"
-            const videoCallsLink = "https://www.revenuecpmgate.com/mt3x9wxj?key=b71ba79424a0121ff6e712aea5e64005";
-            redirect(e.target, videoCallsLink);
-        });
-        
-        // Scroll indicator functionality
-        document.getElementById('scrollIndicator').addEventListener('click', function() {
-            document.getElementById('features').scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
+        // Scroll functionality
+        const scrollIndicator = document.getElementById('scrollIndicator');
+        if (scrollIndicator) {
+            scrollIndicator.addEventListener('click', function() {
+                document.getElementById('features').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             });
-        });
+        }
         
-        // Auto scroll setelah 3 detik
+        // Auto scroll
         setTimeout(() => {
-            const heroHeight = document.getElementById('hero').offsetHeight;
-            window.scrollTo({
-                top: heroHeight * 0.8,
-                behavior: 'smooth'
-            });
+            const hero = document.getElementById('hero');
+            if (hero) {
+                const heroHeight = hero.offsetHeight;
+                window.scrollTo({
+                    top: heroHeight * 0.8,
+                    behavior: 'smooth'
+                });
+            }
         }, 3000);
         
-        // Notifikasi dengan efek
+        // Notifikasi
         setTimeout(() => {
             const notification = document.getElementById('notification');
-            notification.style.display = 'block';
-            
-            // Efek getar pada notifikasi
-            notification.style.animation = 'shake 0.5s ease-in-out';
-            
-            setTimeout(() => {
-                notification.style.animation = '';
-                notification.style.display = 'none';
-            }, 4000);
+            if (notification) {
+                notification.style.display = 'block';
+                notification.style.animation = 'shake 0.5s ease-in-out';
+                
+                setTimeout(() => {
+                    notification.style.animation = '';
+                    notification.style.display = 'none';
+                }, 4000);
+            }
         }, 3000);
         
-        // Efek hover pada tombol
-        document.querySelectorAll('.cta-button, .final-cta-button, .feature-button').forEach(button => {
-            button.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-3px) scale(1.05)';
-            });
-            
-            button.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
+        // Debug info
+        console.log('Landing page loaded successfully');
+        console.log('All buttons should be clickable now');
     </script>
 </body>
 </html>
